@@ -16,6 +16,21 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### `artifacts/tropicanna-water` (`@workspace/tropicanna-water`)
+
+Premium single-page sliding web app for TropiCanna Water branded beverage company.
+
+- Built with React + Vite + Tailwind CSS
+- Sliding panel navigation with CSS transitions (no animation libraries)
+- Sections: Home (hero with Background.png), About, Products (can1.png, can2.png), Contact (Formspree)
+- Formspree contact form pointing to jasper@tropicannawater.com
+- Social links: Twitter, Facebook, Instagram
+- Google Fonts: Inter (via index.html)
+- No backend needed — presentation-first app
+- Can images: artifacts/tropicanna-water/public/can1.png, can2.png (user should replace with actual product shots)
+
 ## Structure
 
 ```text
