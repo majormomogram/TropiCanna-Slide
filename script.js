@@ -63,11 +63,13 @@ async function handleSubmit(event) {
       headers: { Accept: 'application/json' }
     });
 
-    if (res.ok) {
+    var data = await res.json();
+
+    if (data.success) {
       form.style.display = 'none';
       sucEl.style.display = 'block';
     } else {
-      throw new Error('Server error');
+      throw new Error(data.message || 'Server error');
     }
   } catch (e) {
     errEl.style.display = 'block';
