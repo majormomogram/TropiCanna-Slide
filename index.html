@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TropiCanna Water — Premium Branding in Every Sip</title>
+  <meta name="description" content="TropiCanna Water creates custom-branded aluminum cans that turn everyday hydration into a premium brand interaction." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- HOME PANEL -->
+    <div class="panel panel--home active" id="panel-home">
+      <div class="hero-bg">
+        <img src="Background.png" alt="Tropical waterfall" class="hero-img" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="logo">TropiCanna Water</h1>
+        <p class="tagline">Premium Branding in Every Sip.</p>
+        <nav class="main-nav">
+          <button class="nav-btn" onclick="slideTo('about')" data-testid="link-about">About</button>
+          <button class="nav-btn" onclick="slideTo('products')" data-testid="link-products">Products</button>
+          <button class="nav-btn" onclick="slideTo('contact')" data-testid="link-contact">Contact</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ABOUT PANEL -->
+    <div class="panel panel--light" id="panel-about">
+      <div class="panel-inner">
+        <button class="back-btn" onclick="slideBack()" data-testid="button-back-about">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </button>
+        <div class="content-block">
+          <h2 class="section-title">The Vision</h2>
+          <div class="body-text">
+            <p>
+              We believe hydration should be a branded interaction, not a generic necessity.
+              TropiCanna Water was born from the idea that every touchpoint matters — including
+              the can in someone's hand.
+            </p>
+            <p>
+              JJ and Jasper recognised businesses were missing a premium branding opportunity
+              with generic plastic and glass bottles. Aluminum cans are the solution: infinitely
+              recyclable, premium-feel, custom-printed, and undeniably memorable.
+            </p>
+          </div>
+          <div class="mission-card">
+            <span class="mission-label">Our Mission</span>
+            <p class="mission-text">Turning everyday hydration into a bold brand statement.</p>
+            <div class="mission-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS PANEL -->
+    <div class="panel panel--gray" id="panel-products">
+      <div class="panel-inner">
+        <button class="back-btn" onclick="slideBack()" data-testid="button-back-products">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </button>
+        <div class="content-block content-block--wide">
+          <h2 class="section-title section-title--center">Our Canvases</h2>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="can1.png" alt="330ml Thin Can" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                <div class="can-placeholder" style="display:none">
+                  <div class="can-shape">330ml<br>Thin</div>
+                </div>
+              </div>
+              <h3 class="product-name">330ml Thin Can</h3>
+              <p class="product-desc">Sleek, elegant, perfect for premium events and sophisticated settings.</p>
+            </div>
+
+            <div class="product-card product-card--featured">
+              <div class="product-img-wrap">
+                <img src="can2.png" alt="330ml Standard Can" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                <div class="can-placeholder" style="display:none">
+                  <div class="can-shape">330ml<br>Standard</div>
+                </div>
+              </div>
+              <h3 class="product-name">330ml Standard</h3>
+              <p class="product-desc">Classic format providing the maximum canvas for your custom branding.</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <img src="can1.png" alt="500ml Standard Can" class="product-img product-img--lg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                <div class="can-placeholder" style="display:none">
+                  <div class="can-shape">500ml<br>Standard</div>
+                </div>
+              </div>
+              <h3 class="product-name">500ml Standard</h3>
+              <p class="product-desc">Generous hydration that makes a bold, unmissable statement.</p>
+            </div>
+          </div>
+
+          <div class="impact-section">
+            <p class="impact-label">Perfect For</p>
+            <div class="impact-grid">
+              <div class="impact-tile">Exhibitions</div>
+              <div class="impact-tile">Corporate Events</div>
+              <div class="impact-tile">Branded Gifts</div>
+              <div class="impact-tile">Showrooms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT PANEL -->
+    <div class="panel panel--light" id="panel-contact">
+      <div class="panel-inner">
+        <button class="back-btn" onclick="slideBack()" data-testid="button-back-contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </button>
+        <div class="content-block content-block--narrow">
+          <div class="contact-header">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-sub">Ready to make hydration your brand's next power move?</p>
+          </div>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/jasper@tropicannawater.com"
+            method="POST"
+            onsubmit="handleSubmit(event)"
+            data-testid="contact-form"
+          >
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name" data-testid="input-name" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com" data-testid="input-email" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" required class="form-textarea" placeholder="Tell us about your brand and needs..." rows="5" data-testid="input-message"></textarea>
+            </div>
+            <div id="form-error" class="form-error" style="display:none">There was an error sending your message. Please try again.</div>
+            <button type="submit" class="submit-btn" id="submit-btn" data-testid="button-submit">Send Message</button>
+          </form>
+
+          <div id="form-success" class="form-success" style="display:none" data-testid="contact-success">
+            <h3>Message Sent</h3>
+            <p>Thank you for reaching out. We'll be in touch shortly to discuss elevating your brand.</p>
+            <button class="back-btn back-btn--inline" onclick="resetForm()" data-testid="button-send-another">Send another message</button>
+          </div>
+
+          <div class="social-row">
+            <a href="#" class="social-link" aria-label="Twitter" data-testid="social-twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.4 9 4.5-.9-4.2 4-6.5 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook" data-testid="social-facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" data-testid="social-instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
