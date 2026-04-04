@@ -669,24 +669,42 @@ html, body {
   font-size: 0.95rem;
 }
 
-.social-row {
+.contact-details {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 
-.social-link {
-  color: var(--gray-mid);
-  text-decoration: none;
-  transition: color 0.2s, transform 0.2s;
+.contact-detail-group {
   display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.social-link:hover {
+.contact-detail-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 0.2rem;
+}
+
+.contact-detail-value {
+  font-size: 0.95rem;
   color: var(--navy);
-  transform: translateY(-3px);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-detail-value:hover {
+  color: var(--gold);
+}
+
+.contact-detail-person {
+  font-size: 0.82rem;
+  color: var(--gray-mid);
 }
