@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 
@@ -118,30 +118,68 @@
             <span class="panel-eyebrow">Our Product</span>
             <h2 class="section-title section-title--light">On the Table</h2>
             <div class="prod-header-rule"></div>
-            <p class="prod-header-sub">Designed with modern spaces in mind, Raindrop brings a clean and understated presence to every table. Light, balanced, and easy to enjoy — without distraction.</p>
-            <p class="prod-header-tagline">A quiet upgrade to any environment.</p>
+            <p class="prod-header-sub">One product, five formats. Raindrop natural rainwater adapts to every setting — from boardrooms to canteens, offices to events.</p>
+            <p class="prod-header-tagline">Choose the format that fits your space.</p>
           </div>
 
           <!-- Product cards -->
           <div class="prod-cards">
-            <div class="prod-card">
+
+            <div class="prod-card" onclick="openModal('images/product-glass-320ml.jpg','320ml Glass Bottle','Our premium offering — natural rainwater in a sleek glass bottle. Elegant on any table, whether at a dinner, meeting, or hotel suite. Glass is collected and recycled on our end once you\'re done.')">
               <div class="prod-card-img-wrap">
-                <img src="images/raindrop.jpg" alt="Raindrop Water" class="prod-card-img prod-card-img--warm" />
+                <img src="images/product-glass-320ml.jpg" alt="Raindrop 320ml Glass Bottle" class="prod-card-img" />
               </div>
               <div class="prod-card-body">
-                <span class="prod-card-label">Raindrop Water</span>
-                <p class="prod-card-desc">Collected from tropical rainfall and gently refined, Raindrop offers a clean, smooth taste with a naturally light profile. Simple, balanced, and designed for modern spaces.</p>
+                <span class="prod-card-label">320ml Glass Bottle</span>
+                <p class="prod-card-desc">Our premium offering — natural rainwater in a sleek glass bottle. Elegant on any table, whether at a dinner, meeting, or hotel suite. Glass is collected and recycled on our end once you're done.</p>
               </div>
+              <div class="prod-card-hint">Tap to view</div>
             </div>
-            <div class="prod-card">
+
+            <div class="prod-card" onclick="openModal('images/product-pet-250ml.jpg','19L Refillable Gallon','Built for the long haul. Our 19-litre refillable dispenser gallon keeps offices, campuses, and co-working spaces consistently hydrated. Just swap when empty — we handle the refill.')">
               <div class="prod-card-img-wrap">
-                <img src="images/cloudrain.jpg" alt="CloudRain Water" class="prod-card-img prod-card-img--cool" />
+                <img src="images/product-pet-250ml.jpg" alt="Raindrop 19L Refillable Gallon" class="prod-card-img" />
               </div>
               <div class="prod-card-body">
-                <span class="prod-card-label">CloudRain Water</span>
-                <p class="prod-card-desc">Harvested within NAHRIM and refined through a controlled process, CloudRain offers a clean, balanced profile shaped by both nature and precision.</p>
+                <span class="prod-card-label">19L Refillable Gallon</span>
+                <p class="prod-card-desc">Built for the long haul. Our 19-litre refillable dispenser gallon keeps offices, campuses, and co-working spaces consistently hydrated. Just swap when empty — we handle the refill.</p>
               </div>
+              <div class="prod-card-hint">Tap to view</div>
             </div>
+
+            <div class="prod-card" onclick="openModal('images/product-tetrapak-250ml.jpg','250ml Tetrapak','Clean water, school-ready. The tetrapak format is lightweight, spill-resistant, and easy to hand out in bulk — perfect for events, canteens, and anywhere portability matters.')">
+              <div class="prod-card-img-wrap">
+                <img src="images/product-tetrapak-250ml.jpg" alt="Raindrop 250ml Tetrapak" class="prod-card-img" />
+              </div>
+              <div class="prod-card-body">
+                <span class="prod-card-label">250ml Tetrapak</span>
+                <p class="prod-card-desc">Clean water, school-ready. The tetrapak format is lightweight, spill-resistant, and easy to hand out in bulk — perfect for events, canteens, and anywhere portability matters.</p>
+              </div>
+              <div class="prod-card-hint">Tap to view</div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('images/product-pet-500ml.jpg','500ml PET Bottle','The everyday essential. Light enough to carry, large enough to last — our 500ml bottle is a familiar format done right, with the same clean rainwater inside.')">
+              <div class="prod-card-img-wrap">
+                <img src="images/product-pet-500ml.jpg" alt="Raindrop 500ml PET Bottle" class="prod-card-img" />
+              </div>
+              <div class="prod-card-body">
+                <span class="prod-card-label">500ml PET Bottle</span>
+                <p class="prod-card-desc">The everyday essential. Light enough to carry, large enough to last — our 500ml bottle is a familiar format done right, with the same clean rainwater inside.</p>
+              </div>
+              <div class="prod-card-hint">Tap to view</div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('images/product-gallon-19l.jpg','250ml PET Bottle','Small but purposeful. Ideal for packed lunches, goodie bags, or compact catering setups where a full-size bottle would be too much. Same water, smaller footprint.')">
+              <div class="prod-card-img-wrap">
+                <img src="images/product-gallon-19l.jpg" alt="Raindrop 250ml PET Bottle" class="prod-card-img" />
+              </div>
+              <div class="prod-card-body">
+                <span class="prod-card-label">250ml PET Bottle</span>
+                <p class="prod-card-desc">Small but purposeful. Ideal for packed lunches, goodie bags, or compact catering setups where a full-size bottle would be too much. Same water, smaller footprint.</p>
+              </div>
+              <div class="prod-card-hint">Tap to view</div>
+            </div>
+
           </div>
 
           <div class="prod-cta">
@@ -218,6 +256,18 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <!-- Product Modal -->
+  <div id="prod-modal" class="prod-modal" onclick="closeModal(event)">
+    <div class="prod-modal-box">
+      <button class="prod-modal-close" onclick="closeModal()">&times;</button>
+      <img id="prod-modal-img" class="prod-modal-img" src="" alt="" />
+      <div class="prod-modal-body">
+        <span id="prod-modal-label" class="prod-card-label"></span>
+        <p id="prod-modal-desc" class="prod-modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=2"></script>
 </body>
 </html>

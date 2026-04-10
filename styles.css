@@ -557,6 +557,124 @@ html, body {
   transform: translateY(-2px);
 }
 
+/* Card click hint */
+.prod-card {
+  cursor: pointer;
+}
+
+.prod-card-hint {
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 0.6rem 0 0.9rem;
+  transition: color 0.2s;
+}
+
+.prod-card:hover .prod-card-hint {
+  color: var(--gold);
+}
+
+/* ============================================================
+   PRODUCT MODAL
+   ============================================================ */
+
+.prod-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 15, 28, 0.85);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.prod-modal.is-open {
+  display: flex;
+}
+
+.prod-modal-box {
+  background: var(--navy-mid);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  max-width: 860px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-height: 90vh;
+  animation: modalIn 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.94) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.prod-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: var(--white);
+  font-size: 1.3rem;
+  line-height: 1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.prod-modal-img {
+  width: 45%;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  min-height: 420px;
+}
+
+.prod-modal-body {
+  flex: 1;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.prod-modal-desc {
+  font-size: 0.97rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.8;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .prod-modal-box {
+    flex-direction: column;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+  .prod-modal-img {
+    width: 100%;
+    min-height: 260px;
+    max-height: 300px;
+  }
+  .prod-modal-body {
+    padding: 1.5rem;
+  }
+}
+
 /* ============================================================
    CONTACT PANEL
    ============================================================ */

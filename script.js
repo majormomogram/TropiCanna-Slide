@@ -91,6 +91,29 @@ function resetForm() {
 }
 
 /* ============================================================
+   Product Modal
+   ============================================================ */
+
+function openModal(imgSrc, label, desc) {
+  document.getElementById('prod-modal-img').src = imgSrc;
+  document.getElementById('prod-modal-img').alt = label;
+  document.getElementById('prod-modal-label').textContent = label;
+  document.getElementById('prod-modal-desc').textContent = desc;
+  document.getElementById('prod-modal').classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(event) {
+  if (event && event.target !== document.getElementById('prod-modal')) return;
+  document.getElementById('prod-modal').classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ============================================================
    Initial state — ensure home panel is visible
    ============================================================ */
 
