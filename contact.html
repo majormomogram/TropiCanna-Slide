@@ -48,11 +48,11 @@
           class="contact-form"
           action="https://api.web3forms.com/submit"
           method="POST"
-          onsubmit="handleContactSubmit(event)"
         >
           <input type="hidden" name="access_key" value="c31b0830-1f1a-45a2-bf85-43c4e8370071" />
           <input type="hidden" name="subject" value="New TropiCanna Water Enquiry" />
           <input type="hidden" name="from_name" value="TropiCanna Water Website" />
+          <input type="hidden" name="redirect" value="https://tropicannawater.com/contact.html?sent=1" />
 
           <div class="contact-field-row">
             <div class="contact-field">
@@ -88,17 +88,13 @@
             <textarea id="message" name="message" rows="5" required placeholder="Tell us about your space, volume, or event…"></textarea>
           </div>
 
-          <div id="contact-form-error" class="contact-form-error" style="display:none">
-            Something went wrong sending your message. Please try again, or email us directly.
-          </div>
-
-          <button type="submit" id="contact-submit-btn" class="btn btn--solid contact-submit">Send Message</button>
+          <button type="submit" class="btn btn--solid contact-submit">Send Message</button>
         </form>
 
         <div id="contact-form-success" class="contact-form-success" style="display:none">
           <h3>Message sent</h3>
           <p>Thanks for reaching out — we'll be in touch shortly.</p>
-          <button type="button" class="contact-form-reset" onclick="resetContactForm()">Send another message</button>
+          <a href="contact.html" class="contact-form-reset">Send another message</a>
         </div>
       </div>
 
@@ -128,46 +124,9 @@
   </section>
 
   <script>
-    async function handleContactSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const btn = document.getElementById('contact-submit-btn');
-      const errEl = document.getElementById('contact-form-error');
-      const sucEl = document.getElementById('contact-form-success');
-
-      errEl.style.display = 'none';
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        });
-        const data = await res.json();
-        if (data.success) {
-          form.style.display = 'none';
-          sucEl.style.display = 'block';
-        } else {
-          throw new Error(data.message || 'Server error');
-        }
-      } catch (e) {
-        errEl.style.display = 'block';
-        btn.disabled = false;
-        btn.textContent = 'Send Message';
-      }
-    }
-
-    function resetContactForm() {
-      const form = document.getElementById('contact-form');
-      const sucEl = document.getElementById('contact-form-success');
-      const btn = document.getElementById('contact-submit-btn');
-      form.reset();
-      form.style.display = '';
-      sucEl.style.display = 'none';
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('contact-form-success').style.display = 'block';
     }
   </script>
 
