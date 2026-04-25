@@ -1,0 +1,448 @@
+/* ============================================================
+   About Page — TropiCanna Water v2
+   ============================================================ */
+
+.nav-link--active {
+  color: var(--white) !important;
+  border-bottom: 1.5px solid rgba(255,255,255,0.6);
+  padding-bottom: 2px;
+}
+
+/* ============================================================
+   SHARED
+   ============================================================ */
+
+.about-chapter-num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.85rem;
+}
+
+.about-chapter-num--center {
+  text-align: center;
+}
+
+.about-chapter-num--light {
+  color: rgba(255,255,255,0.4);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.about-hero {
+  min-height: 100vh;
+  background-image: url('images/Background 1 (Light Green).png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 7vw 6rem;
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 620px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.about-hero-line {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.about-hero-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.about-hero-cta:hover { opacity: 0.65; }
+
+.about-hero-arrow {
+  font-size: 1.3rem;
+  animation: aboutBounce 1.8s infinite;
+}
+
+@keyframes aboutBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* ============================================================
+   01 — THE SHIFT (image left, text right)
+   ============================================================ */
+
+.about-chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+}
+
+.about-chapter-img {
+  overflow: hidden;
+}
+
+.about-chapter-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-chapter-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 6vw;
+  background: var(--forest-mid);
+}
+
+.about-chapter-body .about-chapter-num {
+  color: rgba(255,255,255,0.5);
+}
+
+.about-chapter-title {
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-chapter-text {
+  font-size: clamp(1.1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 0.85rem;
+}
+
+.about-chapter-text:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   02 — THE APPROACH (centred text + full-width image)
+   ============================================================ */
+
+.about-approach {
+  background: #c8dcc6;
+  padding: 6rem 7vw;
+}
+
+.about-approach-text {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.about-approach .about-chapter-num--center {
+  color: var(--forest-mid);
+  opacity: 0.7;
+}
+
+.about-approach-title {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-approach-body {
+  font-size: clamp(1.1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.about-approach-img {
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 480px;
+}
+
+.about-approach-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================================
+   03 — THE ENGINEERING (dark green, 3 pillars)
+   ============================================================ */
+
+.about-engineering {
+  background: var(--forest);
+  padding: 6rem 7vw;
+}
+
+.about-engineering-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-engineering-title {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.about-engineering-body {
+  font-size: clamp(1.1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 4rem;
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.about-pillar {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 1.75rem;
+}
+
+.about-pillar-num {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.75rem;
+}
+
+.about-pillar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+
+.about-pillar-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+}
+
+/* ============================================================
+   04 — THE JOURNEY (text left, image right)
+   ============================================================ */
+
+.about-journey {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+  background: var(--cream);
+}
+
+.about-journey-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 5vw 5rem 7vw;
+}
+
+.about-journey-body .about-chapter-title {
+  color: var(--text-dark);
+}
+
+.about-journey-img {
+  overflow: hidden;
+}
+
+.about-journey-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-journey-steps {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-journey-step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* vertical line between dots */
+.about-journey-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: 14px;
+  width: 1px;
+  bottom: -2rem;
+  background: var(--sage);
+  opacity: 0.5;
+}
+
+.about-journey-step:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+.about-journey-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--sage);
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-journey-step strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+
+.about-journey-step p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.75;
+}
+
+/* ============================================================
+   05 — THE ARRIVAL
+   ============================================================ */
+
+.about-arrival {
+  background: #c8dcc6;
+  padding: 7rem 7vw;
+  display: flex;
+  justify-content: center;
+}
+
+.about-arrival-inner {
+  max-width: 680px;
+  text-align: center;
+}
+
+.about-arrival-title {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-arrival-body {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.about-arrival-body strong {
+  color: var(--text-dark);
+}
+
+/* ============================================================
+   CLOSING
+   ============================================================ */
+
+.about-closing {
+  background: var(--forest);
+  padding: 7rem 7vw;
+  display: flex;
+  justify-content: center;
+}
+
+.about-closing-inner {
+  max-width: 640px;
+  text-align: center;
+}
+
+.about-closing-title {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-closing-body {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .about-chapter,
+  .about-journey {
+    grid-template-columns: 1fr;
+  }
+
+  .about-chapter-img,
+  .about-journey-img {
+    min-height: 280px;
+  }
+
+  .about-chapter-body,
+  .about-journey-body {
+    padding: 3.5rem 6vw;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

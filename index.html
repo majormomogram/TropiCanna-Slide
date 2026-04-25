@@ -3,271 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TropiCanna Water — Premium Branding in Every Sip</title>
-  <meta name="description" content="TropiCanna Water creates custom-branded aluminum cans that turn everyday hydration into a premium brand interaction." />
-
+  <title>TropiCanna Water — Malaysia's First Sky-Sourced Water</title>
+  <meta name="description" content="Malaysia's first sky-sourced water. Pure tropical rainwater, refined for your business." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div class="app">
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <img src="images/Logo.png" alt="TropiCanna Water" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- HOME PANEL -->
-    <div class="panel panel--home active" id="panel-home">
-      <div class="hero-bg">
-        <img src="Background.png" alt="Tropical waterfall" class="hero-img" />
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <h1 class="logo">TropiCanna Water</h1>
-        <p class="tagline">Premium Branding in Every Sip.</p>
-        <nav class="main-nav">
-          <button class="nav-btn" onclick="slideTo('about')" data-testid="link-about">About</button>
-          <button class="nav-btn" onclick="slideTo('products')" data-testid="link-products">Products</button>
-          <button class="nav-btn" onclick="slideTo('contact')" data-testid="link-contact">Contact</button>
-        </nav>
-      </div>
+  <!-- SECTION 1 — HERO -->
+  <section class="section section--hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Malaysia's first<br>sky-sourced water</h1>
+      <p class="hero-sub">Not groundwater. Not tap.<br>Pure tropical rainwater, refined for your business.</p>
+      <a href="about.html" class="btn btn--outline">Discover more</a>
     </div>
+  </section>
 
-    <!-- ABOUT PANEL -->
-    <div class="panel panel--dark" id="panel-about">
-      <div class="panel-inner">
-        <button class="back-btn back-btn--light" onclick="slideBack()" data-testid="button-back-about">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          Back
-        </button>
-        <div class="content-block">
-
-          <span class="panel-eyebrow">Our Story</span>
-          <h2 class="section-title section-title--light">About Our Water</h2>
-          <div class="body-text body-text--light">
-            <p>
-              The distinctive taste of our rainwater begins in the skies above Malaysia's Oldest Tropical Rainforest.
-              Collected near Taman Negara and refined through controlled purification, every drop carries a naturally
-              light and clean profile shaped by nature, guided by research.
-            </p>
-            <p class="about-tagline">Crisp, smooth, and made for everyday moments.</p>
-          </div>
-
-          <div class="balance-card">
-            <span class="mission-label">Naturally Light, Effortlessly Balanced</span>
-            <p class="balance-text">Naturally soft and near-neutral in pH, crafted to deliver a smooth, balanced taste that pairs effortlessly with food and setting.</p>
-            <p class="balance-sub">Sourced from tropical rainfall and refined through a controlled process, it delivers a gentle drinking experience light on the palate, yet refreshingly distinct.</p>
-            <div class="mission-glow"></div>
-          </div>
-
-          <div class="feature-grid">
-            <div class="feature-card feature-card--dark">
-              <div class="feature-icon">&#9730;</div>
-              <h3 class="feature-title feature-title--light">Rain as the Source</h3>
-              <p class="feature-desc feature-desc--light">Collected from tropical rainfall near Taman Negara, our water begins above ground — offering a naturally soft and clean profile distinct from conventional sources.</p>
-            </div>
-            <div class="feature-card feature-card--dark">
-              <div class="feature-icon">&#9879;</div>
-              <h3 class="feature-title feature-title--light">Refined Through Research</h3>
-              <p class="feature-desc feature-desc--light">Developed in collaboration with NAHRIM, every batch undergoes controlled purification and testing to ensure consistency and safety.</p>
-            </div>
-            <div class="feature-card feature-card--dark">
-              <div class="feature-icon">&#9744;</div>
-              <h3 class="feature-title feature-title--light">Made for Modern Spaces</h3>
-              <p class="feature-desc feature-desc--light">From Airbnb stays to offices and events, Raindrop is designed to complement environments that value clean presentation and thoughtful details.</p>
-            </div>
-          </div>
-
-          <div class="testing-section testing-section--dark">
-            <h3 class="testing-title testing-title--light">Clean by Nature, Verified by Testing</h3>
-            <div class="body-text body-text--light">
-              <p>
-                Every batch of rainwater is tested to ensure a stable and reliable composition. With low total
-                dissolved solids (TDS) and a near-neutral pH, it delivers a clean and consistent drinking profile.
-                Laboratory analysis shows naturally low mineral content — calcium, magnesium, and sodium —
-                contributing to its smooth, light taste.
-              </p>
-              <p>
-                With sodium levels as low as approximately 0.75&nbsp;mg/L, Tropicanna offers a noticeably lighter
-                alternative to most bottled waters.
-              </p>
-              <p>
-                Water is part of every moment — from daily routines to shared experiences. Raindrop is designed
-                to offer a clean, balanced drinking experience that fits effortlessly into modern spaces, without
-                distraction or heaviness.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+  <!-- SECTION 2 — FROM THE SKY -->
+  <section class="section section--sky" id="about">
+    <div class="sky-content">
+      <h2 class="section-heading">From the sky,<br>to you</h2>
+      <p class="section-sub">It starts from the biggest juice source — the sky.</p>
     </div>
+  </section>
 
-    <!-- PRODUCTS PANEL -->
-    <div class="panel panel--dark" id="panel-products">
-      <div class="panel-inner">
-        <button class="back-btn back-btn--light" onclick="slideBack()" data-testid="button-back-products">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          Back
-        </button>
+  <!-- SECTION 3 — NAHRIM STRIP -->
+  <section class="section section--strip">
+    <p class="strip-text">Developed in collaboration with NAHRIM, Malaysia's national water research institute.</p>
+  </section>
 
-        <div class="content-block">
-
-          <!-- Header -->
-          <div class="prod-header">
-            <span class="panel-eyebrow">Our Product</span>
-            <h2 class="section-title section-title--light">On the Table</h2>
-            <div class="prod-header-rule"></div>
-            <p class="prod-header-sub">One product, five formats. Raindrop natural rainwater adapts to every setting — from boardrooms to canteens, offices to events.</p>
-            <p class="prod-header-tagline">Choose the format that fits your space.</p>
-          </div>
-
-          <!-- Product cards -->
-          <div class="prod-cards">
-
-            <div class="prod-card" onclick="openModal('images/product-glass-320ml.jpg','320ml Glass Bottle','Our premium offering — natural rainwater in a sleek glass bottle. Elegant on any table, whether at a dinner, meeting, or hotel suite. Glass is collected and recycled on our end once you\'re done.')">
-              <div class="prod-card-img-wrap">
-                <img src="images/product-glass-320ml.jpg" alt="Raindrop 320ml Glass Bottle" class="prod-card-img" />
-              </div>
-              <div class="prod-card-body">
-                <span class="prod-card-label">320ml Glass Bottle</span>
-                <p class="prod-card-desc">Our premium offering — natural rainwater in a sleek glass bottle. Elegant on any table, whether at a dinner, meeting, or hotel suite. Glass is collected and recycled on our end once you're done.</p>
-              </div>
-              <div class="prod-card-hint">Tap to view</div>
-            </div>
-
-            <div class="prod-card" onclick="openModal('images/product-pet-250ml.jpg','19L Refillable Gallon','Built for the long haul. Our 19-litre refillable dispenser gallon keeps offices, campuses, and co-working spaces consistently hydrated. Just swap when empty — we handle the refill.')">
-              <div class="prod-card-img-wrap">
-                <img src="images/product-pet-250ml.jpg" alt="Raindrop 19L Refillable Gallon" class="prod-card-img" />
-              </div>
-              <div class="prod-card-body">
-                <span class="prod-card-label">19L Refillable Gallon</span>
-                <p class="prod-card-desc">Built for the long haul. Our 19-litre refillable dispenser gallon keeps offices, campuses, and co-working spaces consistently hydrated. Just swap when empty — we handle the refill.</p>
-              </div>
-              <div class="prod-card-hint">Tap to view</div>
-            </div>
-
-            <div class="prod-card" onclick="openModal('images/product-tetrapak-250ml.jpg','250ml Tetrapak','Clean water, school-ready. The tetrapak format is lightweight, spill-resistant, and easy to hand out in bulk — perfect for events, canteens, and anywhere portability matters.')">
-              <div class="prod-card-img-wrap">
-                <img src="images/product-tetrapak-250ml.jpg" alt="Raindrop 250ml Tetrapak" class="prod-card-img" />
-              </div>
-              <div class="prod-card-body">
-                <span class="prod-card-label">250ml Tetrapak</span>
-                <p class="prod-card-desc">Clean water, school-ready. The tetrapak format is lightweight, spill-resistant, and easy to hand out in bulk — perfect for events, canteens, and anywhere portability matters.</p>
-              </div>
-              <div class="prod-card-hint">Tap to view</div>
-            </div>
-
-            <div class="prod-card" onclick="openModal('images/product-pet-500ml.jpg','500ml PET Bottle','The everyday essential. Light enough to carry, large enough to last — our 500ml bottle is a familiar format done right, with the same clean rainwater inside.')">
-              <div class="prod-card-img-wrap">
-                <img src="images/product-pet-500ml.jpg" alt="Raindrop 500ml PET Bottle" class="prod-card-img" />
-              </div>
-              <div class="prod-card-body">
-                <span class="prod-card-label">500ml PET Bottle</span>
-                <p class="prod-card-desc">The everyday essential. Light enough to carry, large enough to last — our 500ml bottle is a familiar format done right, with the same clean rainwater inside.</p>
-              </div>
-              <div class="prod-card-hint">Tap to view</div>
-            </div>
-
-            <div class="prod-card" onclick="openModal('images/product-gallon-19l.jpg','250ml PET Bottle','Small but purposeful. Ideal for packed lunches, goodie bags, or compact catering setups where a full-size bottle would be too much. Same water, smaller footprint.')">
-              <div class="prod-card-img-wrap">
-                <img src="images/product-gallon-19l.jpg" alt="Raindrop 250ml PET Bottle" class="prod-card-img" />
-              </div>
-              <div class="prod-card-body">
-                <span class="prod-card-label">250ml PET Bottle</span>
-                <p class="prod-card-desc">Small but purposeful. Ideal for packed lunches, goodie bags, or compact catering setups where a full-size bottle would be too much. Same water, smaller footprint.</p>
-              </div>
-              <div class="prod-card-hint">Tap to view</div>
-            </div>
-
-          </div>
-
-          <div class="prod-cta">
-            <button class="prod-cta-btn" onclick="slideTo('contact')" data-testid="button-contact-cta">
-              Contact Us Now
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </div>
-          </div><!-- end content-block -->
-        </div>
+  <!-- SECTION 4 — BORN FROM THE RAINFOREST -->
+  <section class="section section--forest">
+    <div class="forest-content">
+      <h2 class="section-heading section-heading--light">Born from the<br>rainforest</h2>
+      <p class="section-sub section-sub--light">Sourced from Taman Negara, one of the world's oldest<br>rainforests — where nature remains completely untouched.</p>
     </div>
+  </section>
 
-    <!-- CONTACT PANEL -->
-    <div class="panel panel--light" id="panel-contact">
-      <div class="panel-inner">
-        <button class="back-btn" onclick="slideBack()" data-testid="button-back-contact">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          Back
-        </button>
-        <div class="content-block content-block--narrow">
-          <div class="contact-header">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-sub">Ready to make hydration your brand's next power move?</p>
-          </div>
-
-          <form
-            id="contact-form"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            onsubmit="handleSubmit(event)"
-            data-testid="contact-form"
-          >
-            <input type="hidden" name="access_key" value="c31b0830-1f1a-45a2-bf85-43c4e8370071" />
-            <input type="hidden" name="subject" value="New TropiCanna Water Enquiry" />
-            <input type="hidden" name="from_name" value="TropiCanna Water Website" />
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name" data-testid="input-name" />
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com" data-testid="input-email" />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" required class="form-textarea" placeholder="Tell us about your brand and needs..." rows="5" data-testid="input-message"></textarea>
-            </div>
-            <div id="form-error" class="form-error" style="display:none">There was an error sending your message. Please try again.</div>
-            <button type="submit" class="submit-btn" id="submit-btn" data-testid="button-submit">Send Message</button>
-          </form>
-
-          <div id="form-success" class="form-success" style="display:none" data-testid="contact-success">
-            <h3>Message Sent</h3>
-            <p>Thank you for reaching out. We'll be in touch shortly to discuss elevating your brand.</p>
-            <button class="back-btn back-btn--inline" onclick="resetForm()" data-testid="button-send-another">Send another message</button>
-          </div>
-
-          <div class="contact-details">
-            <div class="contact-detail-group">
-              <span class="contact-detail-label">Email</span>
-              <a href="mailto:jjyong@tropicannawater.com" class="contact-detail-value">jjyong@tropicannawater.com</a>
-              <a href="mailto:jasper@tropicannawater.com" class="contact-detail-value">jasper@tropicannawater.com</a>
-            </div>
-            <div class="contact-detail-group">
-              <span class="contact-detail-label">Phone</span>
-              <a href="tel:+60162761933" class="contact-detail-value">016 276 1933 <span class="contact-detail-person">(JJ)</span></a>
-              <a href="tel:+60183511355" class="contact-detail-value">018 351 1355 <span class="contact-detail-person">(Jasper)</span></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
+  <!-- SECTION 5 — ELEVATE -->
+  <section class="section section--elevate" id="products">
+    <div class="elevate-content">
+      <h2 class="section-heading section-heading--large">Elevate what you serve,<br>built for modern spaces</h2>
+      <p class="section-sub">Light, clean, and balanced — designed to<br>complement modern spaces and everyday moments.</p>
+      <a href="about.html" class="btn btn--outline">Discover more</a>
     </div>
+  </section>
 
-  </div>
-
-  <!-- Product Modal -->
-  <div id="prod-modal" class="prod-modal" onclick="closeModal(event)">
-    <div class="prod-modal-box">
-      <button class="prod-modal-close" onclick="closeModal()">&times;</button>
-      <img id="prod-modal-img" class="prod-modal-img" src="" alt="" />
-      <div class="prod-modal-body">
-        <span id="prod-modal-label" class="prod-card-label"></span>
-        <p id="prod-modal-desc" class="prod-modal-desc"></p>
-      </div>
+  <!-- SECTION 6 — CTA -->
+  <section class="section section--cta" id="contact">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to serve<br>something different?</h2>
+      <a href="products.html" class="btn btn--solid">Explore our water</a>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js?v=2"></script>
 </body>
 </html>
